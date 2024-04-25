@@ -10,5 +10,5 @@ Feature: Deconnexion
     Then Je me redirige vers la page home
 
   @logout
-  Scenario: Je souhaite souhaite me deconnecter
+  Scenario: Je souhaite  me deconnecter
     When Je me deconnecte
