@@ -2,11 +2,7 @@ package com.e2eTests.automation.step_definitions;
 
 import java.util.Map;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import com.e2eTests.automation.page_objects.AddNewCustomerPage;
 import com.e2eTests.automation.utils.*;
 
@@ -87,9 +83,9 @@ public class AddNewCustomerStepDefinition {
 	@When("Je clique sur Save")
 	public void jeCliqueSurSave() throws InterruptedException {
 
-		//AddNewCustomerPage.getBtnSave();
+		AddNewCustomerPage.getBtnSave();
 		
-		 seleniumUtils.click(AddNewCustomerPage.getBtnSave());
+		 //seleniumUtils.click(AddNewCustomerPage.getBtnSave());
 		//((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)", "");
 		Thread.sleep(3000);
 
