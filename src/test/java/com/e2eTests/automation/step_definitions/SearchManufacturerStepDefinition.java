@@ -25,7 +25,9 @@ public class SearchManufacturerStepDefinition {
 	}
 
 @When("Je clique sur Manufacturers")
-public void je_clique_sur_manufacturers() {
+public void je_clique_sur_manufacturers() throws InterruptedException {
+	
+	Thread.sleep(3000);
 	
 	seleniumUtils.click(SearchManufacturerPage.getBtnManufacturers());
 }

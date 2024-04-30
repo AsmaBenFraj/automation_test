@@ -34,7 +34,8 @@ public class SearchGiftCardPage extends BasePage {
 	public static WebElement getBtnSales() {
 		return btnSales;
 	}
-	public static WebElement getBtnGiftCards() {
+	public static WebElement getBtnGiftCards() throws InterruptedException {
+		Thread.sleep(4000);
 		return btnGiftCards;
 	}
 	public static WebElement getRecipientName() {

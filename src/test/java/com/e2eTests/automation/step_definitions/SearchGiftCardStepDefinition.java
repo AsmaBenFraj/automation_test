@@ -28,26 +28,27 @@ public class SearchGiftCardStepDefinition {
 	
 	
 	@When("Je clique sur Sales")
-	public void je_clique_sur_sales() {
-		SearchGiftCardPage.getBtnSales().click();
+	public void je_clique_sur_sales() throws InterruptedException {
+		Thread.sleep(3000);
+		seleniumUtils.click(SearchGiftCardPage.getBtnSales());
 	   
 	}
 
 	@When("Je clique sur Gift cards")
-	public void je_clique_sur_gift_cards() {
-		SearchGiftCardPage.getBtnGiftCards().click();
+	public void je_clique_sur_gift_cards() throws InterruptedException {
+		seleniumUtils.click(SearchGiftCardPage.getBtnGiftCards());
 	    
 	}
 
-	@When("Je saisie le Recipient name")
-	public void je_saisie_le_recipient_name() {
-		SearchGiftCardPage.getRecipientName().sendKeys("Asma");
+	@When("Je saisie le Recipient name {string}")
+	public void je_saisie_le_recipient_name(String name) {
+		seleniumUtils.writeText(SearchGiftCardPage.getRecipientName(), name);
 	    
 	}
 
 	@When("Je choisis l'etat de la carte")
 	public void je_choisis_l_etat_de_la_carte() {
-		selectFromListUtils.selectDropDownListByVisibleText(SearchGiftCardPage.getActivatedId(), "Actived");
+		selectFromListUtils.selectDropDownListByVisibleText(SearchGiftCardPage.getActivatedId(), "Activated");
 	    
 	}
 
